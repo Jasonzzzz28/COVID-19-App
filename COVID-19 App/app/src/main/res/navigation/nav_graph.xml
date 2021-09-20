@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.cmsc436semesterprojectgroup61.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_questionnaire"
+            app:destination="@id/questionnaire" />
+        <action
+            android:id="@+id/action_FirstFragment_to_questionnaire_history"
+            app:destination="@id/questionnaire_history" />
+        <action
+            android:id="@+id/action_FirstFragment_to_resources"
+            app:destination="@id/resources" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionnaire"
+        android:name="com.example.cmsc436semesterprojectgroup61.questionnaire"
+        android:label="fragment_questionnaire_list"
+        tools:layout="@layout/fragment_questionnaire_list" >
+        <action
+            android:id="@+id/action_questionnaire_to_questionnaire_details"
+            app:destination="@id/questionnaire_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionnaire_history"
+        android:name="com.example.cmsc436semesterprojectgroup61.questionnaire_history"
+        android:label="fragment_questionnaire_history_list"
+        tools:layout="@layout/fragment_questionnaire_history_list" />
+    <fragment
+        android:id="@+id/resources"
+        android:name="com.example.cmsc436semesterprojectgroup61.resources"
+        android:label="fragment_resources"
+        tools:layout="@layout/fragment_resources" />
+    <fragment
+        android:id="@+id/questionnaire_details"
+        android:name="com.example.cmsc436semesterprojectgroup61.questionnaire_details"
+        android:label="questionnaire_details" >
+        <action
+            android:id="@+id/action_questionnaire_details_to_mapPage"
+            app:destination="@id/mapPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapPage"
+        android:name="com.example.cmsc436semesterprojectgroup61.MapPage"
+        android:label="MapPage" />
+</navigation>
